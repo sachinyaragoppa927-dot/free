@@ -1,6 +1,6 @@
 import { CheckCircle, Award, BookOpen, Heart } from 'lucide-react';
 import { coachInfo } from '../data';
-import { Container, SectionHeading, LinkButton } from '../components/ui';
+import { Container, SectionHeading } from '../components/ui';
 import { StatCard, CTASection } from '../components/shared';
 import { useScrollReveal } from '../hooks';
 

@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-import { Container, SectionHeading, Button } from '../components/ui';
+import { Container, Button } from '../components/ui';
 
 interface FormData {
   name: string;

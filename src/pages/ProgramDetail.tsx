@@ -1,7 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Check, Clock, Users } from 'lucide-react';
 import { programs } from '../data';
-import { Container, SectionHeading, LinkButton } from '../components/ui';
+import { Container, SectionHeading } from '../components/ui';
 import { FAQAccordion, CTASection } from '../components/shared';
 import { faqData } from '../data';
 

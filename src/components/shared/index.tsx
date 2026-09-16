@@ -247,11 +247,11 @@ export function CTASection({ title, description, primaryCta = 'Book Consultation
           </p>
         )}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <LinkButton to="/contact" variant={dark ? 'primary' : 'primary'} size="lg">
+          <LinkButton to="/contact" size="lg">
             {primaryCta}
           </LinkButton>
           {secondaryCta && (
-            <LinkButton to="/programs" variant={dark ? 'outline' : 'outline'} size="lg">
+            <LinkButton to="/programs" variant="outline" size="lg">
               {secondaryCta}
             </LinkButton>
           )}
