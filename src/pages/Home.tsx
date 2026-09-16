@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Target, TrendingUp, Users, CheckCircle } from 'lucide-react';
-import { programs, testimonials, faqData, coachInfo } from '../data';
+import { programs, testimonials, faqData, coachInfo, pricingPlans, successStories } from '../data';
 import { LinkButton, Container, SectionHeading } from '../components/ui';
-import { ProgramCard, TestimonialCard, FAQAccordion, StatCard, CTASection } from '../components/shared';
+import { ProgramCard, TestimonialCard, PricingCard, SuccessStoryCard, FAQAccordion, StatCard, CTASection } from '../components/shared';
 import { useScrollReveal } from '../hooks';
 
 const HERO_IMAGE = "https://image.qwenlm.ai/generated-images/e82b4c71-5851-44ad-9425-c7b18f96d0d2/_result.png";
@@ -210,6 +210,54 @@ function TestimonialsSection() {
   );
 }
 
+function SuccessStoriesSection() {
+  return (
+    <section className="section-padding bg-neutral-50">
+      <Container>
+        <SectionHeading
+          eyebrow="Success Stories"
+          title="Real People, Real Progress"
+          description="See how our clients have transformed their fitness and their lives."
+        />
+        <div className="grid md:grid-cols-3 gap-6">
+          {successStories.slice(0, 3).map((story) => (
+            <SuccessStoryCard key={story.name} story={story} />
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <LinkButton to="/success-stories" variant="outline">
+            View All Success Stories
+          </LinkButton>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function PricingPreviewSection() {
+  return (
+    <section className="section-padding">
+      <Container>
+        <SectionHeading
+          eyebrow="Pricing"
+          title="Simple, Transparent Pricing"
+          description="Choose the coaching plan that fits your goals and budget. No hidden fees."
+        />
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {pricingPlans.map((plan) => (
+            <PricingCard key={plan.name} plan={plan} />
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <LinkButton to="/pricing" variant="ghost">
+            Compare All Plans →
+          </LinkButton>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function FAQSection() {
   return (
     <section className="section-padding">
@@ -233,7 +281,9 @@ export default function Home() {
       <CoachIntroSection />
       <ProgramsSection />
       <HowItWorksSection />
+      <SuccessStoriesSection />
       <TestimonialsSection />
+      <PricingPreviewSection />
       <FAQSection />
       <CTASection
         title="Ready to Start Your Transformation?"

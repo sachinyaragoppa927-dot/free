@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Star, Clock, Users, ArrowRight, Check } from 'lucide-react';
 import { Program, Testimonial, PricingPlan, FAQ, SuccessStory } from '../../data';
-import { Button, LinkButton } from '../ui';
+import { LinkButton } from '../ui';
 import { useScrollReveal } from '../../hooks';
 
 /* Program Card */
